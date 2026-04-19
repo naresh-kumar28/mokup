@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&family=Fira+Code:wght@300..700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-tertiary: var(--tertiary);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-destructive: var(--destructive);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --font-family-sans: var(--font-sans);
+        --font-family-heading: var(--font-heading);
+      }
+      :root { --background: #F9F7F2;
+        --tertiary: #E8E3D8;
+        --secondary: #4A4A4A;
+        --radius: 0.25rem;
+        --primary: #C5A059;
+        --font-heading: "Playfair Display", serif;
+        --accent: #F5F2EA;
+        --muted-foreground: #777777;
+        --card-foreground: #333333;
+        --input: #E8E3D8;
+        --secondary-foreground: #FFFFFF;
+        --font-sans: "Inter", sans-serif;
+        --border: #E8E3D8;
+        --muted: #F5F2EA;
+        --foreground: #333333;
+        --destructive: #D9534F;
+        --ring: #C5A059;
+        --card: #FFFFFF;
+        --primary-foreground: #FFFFFF; }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen w-full bg-background flex flex-col relative font-sans text-foreground overflow-x-hidden">
+
+        <!-- Header -->
+        <header
+            class="w-full bg-background/90 backdrop-blur-md border-b border-border sticky top-0 z-50 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <a href="home.html"
+                    class="text-2xl font-heading font-bold text-foreground tracking-wide flex items-center gap-2">
+                    <iconify-icon icon="lucide:sofa" class="text-primary"></iconify-icon>
+                    BIPIN <span class="text-primary font-normal">INTERIORS</span>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                    <a href="home.html" class="text-foreground hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-foreground hover:text-primary transition-colors">About</a>
+                    <a href="services.html" class="text-foreground hover:text-primary transition-colors">Services</a>
+                    <a href="work_gallery.html" class="text-foreground hover:text-primary transition-colors">Portfolio</a>
+                    <a href="contact_us.html" class="text-foreground hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-foreground hover:text-primary transition-colors rounded-full hover:bg-muted"
+                        aria-label="Toggle Dark Mode">
+                        <iconify-icon icon="lucide:moon" class="text-xl"></iconify-icon>
+                    </button>
+                    <button class="lg:hidden p-2 text-foreground hover:text-primary transition-colors">
+                        <iconify-icon icon="lucide:menu" class="text-2xl"></iconify-icon>
+                    </button>
+                    <a href="#"
+                        class="hidden lg:flex px-6 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors shadow-sm">
+                        Login/Signup
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex flex-col w-full">
+
+            <!-- Page Header -->
+            <section class="py-16 px-6 bg-secondary text-white text-center relative overflow-hidden">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <span class="text-primary text-sm font-bold uppercase tracking-widest mb-4 block">Legal
+                        Information</span>
+                    <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">Privacy Policy</h1>
+                    <p class="text-sm text-white/80 font-light">Last Updated: October 15, 2023</p>
+                </div>
+            </section>
+
+            <!-- Content Section -->
+            <section class="py-20 px-6 bg-background">
+                <div
+                    class="max-w-4xl mx-auto bg-card p-10 md:p-16 rounded-sm shadow-sm border border-border prose prose-stone prose-h2:font-heading prose-h2:text-2xl prose-h2:text-foreground prose-h3:font-heading prose-h3:text-xl prose-h3:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary hover:prose-a:text-primary/80 max-w-none">
+
+                    <p>
+                        At Bipin Interiors, we are committed to protecting your privacy and ensuring the security of
+                        your personal information. This Privacy Policy explains how we collect, use, disclose, and
+                        safeguard your information when you visit our website or use our interior design and
+                        installation services.
+                    </p>
+
+                    <h2>1. Information We Collect</h2>
+                    <p>We may collect personal information that you voluntarily provide to us when you express an
+                        interest in obtaining information about us or our products and Services, when you participate in
+                        activities on the Website, or otherwise when you contact us.</p>
+
+                    <h3>Personal Information Provided by You</h3>
+                    <p>The personal information that we collect depends on the context of your interactions with us and
+                        the Website, the choices you make, and the products and features you use. The personal
+                        information we collect may include the following:</p>
+                    <ul>
+                        <li><strong>Contact Data:</strong> Name, email address, phone number, and physical address for
+                            site visits and installations.</li>
+                        <li><strong>Project Details:</strong> Information regarding your property, design preferences,
+                            budget, and timeline.</li>
+                        <li><strong>Communication Records:</strong> Records of your correspondence with our team,
+                            including WhatsApp messages and emails.</li>
+                    </ul>
+
+                    <h2>2. How We Use Your Information</h2>
+                    <p>We use personal information collected via our Website for a variety of business purposes
+                        described below. We process your personal information for these purposes in reliance on our
+                        legitimate business interests, in order to enter into or perform a contract with you, with your
+                        consent, and/or for compliance with our legal obligations.</p>
+                    <ul>
+                        <li>To facilitate and deliver our interior installation services.</li>
+                        <li>To send you administrative information, such as quotes, invoices, and scheduling updates.
+                        </li>
+                        <li>To respond to your inquiries and offer support.</li>
+                        <li>To send you marketing and promotional communications (you can opt-out at any time).</li>
+                        <li>To request feedback and contact you about your use of our Website and services.</li>
+                    </ul>
+
+                    <h2>3. Will Your Information Be Shared with Anyone?</h2>
+                    <p>We only share information with your consent, to comply with laws, to provide you with services,
+                        to protect your rights, or to fulfill business obligations. We may process or share your data
+                        that we hold based on the following legal basis:</p>
+                    <ul>
+                        <li><strong>Vendors and Contractors:</strong> We may share your address and project details with
+                            our trusted material suppliers and contracted artisans who are directly involved in
+                            executing your project.</li>
+                        <li><strong>Legal Obligations:</strong> We may disclose your information where we are legally
+                            required to do so in order to comply with applicable law, governmental requests, a judicial
+                            proceeding, court order, or legal process.</li>
+                    </ul>
+                    <p>We do not sell, rent, or trade your personal information to third parties for their promotional
+                        purposes.</p>
+
+                    <h2>4. How Long Do We Keep Your Information?</h2>
+                    <p>We will only keep your personal information for as long as it is necessary for the purposes set
+                        out in this privacy notice, unless a longer retention period is required or permitted by law
+                        (such as tax, accounting, or other legal requirements). When we have no ongoing legitimate
+                        business need to process your personal information, we will either delete or anonymize such
+                        information.</p>
+
+                    <h2>5. How Do We Keep Your Information Safe?</h2>
+                    <p>We have implemented appropriate technical and organizational security measures designed to
+                        protect the security of any personal information we process. However, despite our safeguards and
+                        efforts to secure your information, no electronic transmission over the Internet or information
+                        storage technology can be guaranteed to be 100% secure.</p>
+
+                    <h2>6. Contact Us About This Policy</h2>
+                    <p>If you have questions or comments about this notice, you may email us at <a
+                            href="mailto:privacy@bipininteriors.com">privacy@bipininteriors.com</a> or by post to:</p>
+                    <p>
+                        <strong>Bipin Interiors</strong><br>
+                        123 Luxury Avenue, Design District<br>
+                        City, State 10001
+                    </p>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-background pt-20 pb-10 px-6 border-t border-border">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="#"
+                        class="text-2xl font-heading font-bold text-foreground tracking-wide flex items-center gap-2 mb-6">
+                        <iconify-icon icon="lucide:sofa" class="text-primary"></iconify-icon>
+                        BIPIN <span class="text-primary font-normal">INTERIORS</span>
+                    </a>
+                    <p class="text-muted-foreground text-sm leading-relaxed mb-6">
+                        Premium interior installation studio specializing in luxury finishes, wall paneling, and bespoke
+                        spatial transformations.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-muted-foreground">
+                        <li><a href="home.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="work_gallery.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="contact_us.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Legal</h4>
+                    <ul class="space-y-3 text-sm text-muted-foreground">
+                        <li><a href="#" class="text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Return & Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-muted-foreground">
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:phone" class="text-primary text-lg shrink-0"></iconify-icon>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:mail" class="text-primary text-lg shrink-0"></iconify-icon>
+                            <span>hello@bipininteriors.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+                <p>&copy; 2023 Bipin Interiors. All rights reserved.</p>
+                <p>Designed with elegance.</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

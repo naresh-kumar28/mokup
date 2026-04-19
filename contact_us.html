@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&family=Fira+Code:wght@300..700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-tertiary: var(--tertiary);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-destructive: var(--destructive);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --font-family-sans: var(--font-sans);
+        --font-family-heading: var(--font-heading);
+      }
+      :root { --background: #F9F7F2;
+        --tertiary: #E8E3D8;
+        --secondary: #4A4A4A;
+        --radius: 0.25rem;
+        --primary: #C5A059;
+        --font-heading: "Playfair Display", serif;
+        --accent: #F5F2EA;
+        --muted-foreground: #777777;
+        --card-foreground: #333333;
+        --input: #E8E3D8;
+        --secondary-foreground: #FFFFFF;
+        --font-sans: "Inter", sans-serif;
+        --border: #E8E3D8;
+        --muted: #F5F2EA;
+        --foreground: #333333;
+        --destructive: #D9534F;
+        --ring: #C5A059;
+        --card: #FFFFFF;
+        --primary-foreground: #FFFFFF; }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen w-full bg-background flex flex-col relative font-sans text-foreground overflow-x-hidden">
+
+        <!-- Header -->
+        <header
+            class="w-full bg-background/90 backdrop-blur-md border-b border-border sticky top-0 z-50 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <a href="home.html"
+                    class="text-2xl font-heading font-bold text-foreground tracking-wide flex items-center gap-2">
+                    <iconify-icon icon="lucide:sofa" class="text-primary"></iconify-icon>
+                    BIPIN <span class="text-primary font-normal">INTERIORS</span>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                    <a href="home.html" class="text-foreground hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-foreground hover:text-primary transition-colors">About</a>
+                    <a href="services.html" class="text-foreground hover:text-primary transition-colors">Services</a>
+                    <a href="work_gallery.html" class="text-foreground hover:text-primary transition-colors">Portfolio</a>
+                    <a href="contact_us.html" class="text-primary border-b border-primary pb-1">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-foreground hover:text-primary transition-colors rounded-full hover:bg-muted"
+                        aria-label="Toggle Dark Mode">
+                        <iconify-icon icon="lucide:moon" class="text-xl"></iconify-icon>
+                    </button>
+                    <button class="lg:hidden p-2 text-foreground hover:text-primary transition-colors">
+                        <iconify-icon icon="lucide:menu" class="text-2xl"></iconify-icon>
+                    </button>
+                    <a href="#"
+                        class="hidden lg:flex px-6 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors shadow-sm">
+                        Login/Signup
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex flex-col w-full">
+
+            <!-- Page Header -->
+            <section class="py-24 px-6 bg-secondary text-white text-center relative overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center">
+                </div>
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <span class="text-primary text-sm font-bold uppercase tracking-widest mb-4 block">Get in
+                        Touch</span>
+                    <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">Let's Discuss Your Project</h1>
+                    <p class="text-lg text-white/80 font-light max-w-xl mx-auto">
+                        Whether you have a clear vision or need expert guidance, our team is here to bring your ideas to
+                        life.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="py-24 px-6 bg-background">
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+
+                    <!-- Contact Info & WhatsApp -->
+                    <div class="w-full lg:w-1/3 space-y-12">
+                        <div>
+                            <span class="text-primary text-sm font-bold uppercase tracking-widest">Contact
+                                Details</span>
+                            <h2 class="text-3xl font-heading font-bold mt-3 text-foreground mb-6">Reach Out Directly
+                            </h2>
+                            <p class="text-muted-foreground text-sm leading-relaxed mb-8">
+                                Our design consultants are available to answer your questions and schedule site visits.
+                            </p>
+
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                        <iconify-icon icon="lucide:map-pin" class="text-xl"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-foreground mb-1">Studio Location</h4>
+                                        <p class="text-muted-foreground text-sm">123 Luxury Avenue, Design
+                                            District<br>City, State 10001</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                        <iconify-icon icon="lucide:phone" class="text-xl"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-foreground mb-1">Phone</h4>
+                                        <p class="text-muted-foreground text-sm">+1 (555) 123-4567<br>Mon-Sat, 9am to
+                                            6pm</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                        <iconify-icon icon="lucide:mail" class="text-xl"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-foreground mb-1">Email</h4>
+                                        <p class="text-muted-foreground text-sm">
+                                            hello@bipininteriors.com<br>projects@bipininteriors.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-secondary p-8 rounded-sm text-white">
+                            <h3 class="text-xl font-heading font-bold mb-4">Instant Support</h3>
+                            <p class="text-white/80 text-sm mb-6">Chat with our team directly on WhatsApp for quick
+                                inquiries and quotes.</p>
+                            <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center justify-center gap-2 w-full py-3 bg-[#25D366] text-white font-bold rounded-sm hover:bg-[#20b858] transition-colors shadow-md">
+                                <iconify-icon icon="lucide:message-circle" class="text-xl"></iconify-icon> Chat on
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="w-full lg:w-2/3">
+                        <div class="bg-card p-10 md:p-12 rounded-sm shadow-sm border border-border h-full">
+                            <h2 class="text-2xl font-heading font-bold text-foreground mb-2">Send us a Message</h2>
+                            <p class="text-muted-foreground text-sm mb-8">Fill out the form below and we will get back
+                                to you within 24 hours.</p>
+
+                            <form class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="firstName" class="text-sm font-bold text-foreground">First
+                                            Name</label>
+                                        <input type="text" id="firstName"
+                                            class="w-full px-4 py-3 bg-background border border-input rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-sm"
+                                            placeholder="John" />
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="lastName" class="text-sm font-bold text-foreground">Last
+                                            Name</label>
+                                        <input type="text" id="lastName"
+                                            class="w-full px-4 py-3 bg-background border border-input rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-sm"
+                                            placeholder="Doe" />
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="email" class="text-sm font-bold text-foreground">Email
+                                            Address</label>
+                                        <input type="email" id="email"
+                                            class="w-full px-4 py-3 bg-background border border-input rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-sm"
+                                            placeholder="john@example.com" />
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="phone" class="text-sm font-bold text-foreground">Phone
+                                            Number</label>
+                                        <input type="tel" id="phone"
+                                            class="w-full px-4 py-3 bg-background border border-input rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-sm"
+                                            placeholder="+1 (555) 000-0000" />
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="service" class="text-sm font-bold text-foreground">Service
+                                        Required</label>
+                                    <select id="service"
+                                        class="w-full px-4 py-3 bg-background border border-input rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-sm appearance-none cursor-pointer">
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="uv-marble">UV Marble Sheet Installation</option>
+                                        <option value="pvc-paneling">PVC Paneling</option>
+                                        <option value="false-ceiling">False Ceiling</option>
+                                        <option value="wpc-louvers">WPC Louvers</option>
+                                        <option value="renovation">Full Home Renovation</option>
+                                        <option value="other">Other / Consultation</option>
+                                    </select>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="message" class="text-sm font-bold text-foreground">Project
+                                        Details</label>
+                                    <textarea id="message" rows="5"
+                                        class="w-full px-4 py-3 bg-background border border-input rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-sm resize-none"
+                                        placeholder="Tell us about your space, dimensions, and vision..."></textarea>
+                                </div>
+
+                                <button type="button"
+                                    class="w-full py-4 bg-primary text-primary-foreground font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-primary/90 transition-all shadow-md mt-4">
+                                    Submit Inquiry
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-background pt-20 pb-10 px-6 border-t border-border">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="#"
+                        class="text-2xl font-heading font-bold text-foreground tracking-wide flex items-center gap-2 mb-6">
+                        <iconify-icon icon="lucide:sofa" class="text-primary"></iconify-icon>
+                        BIPIN <span class="text-primary font-normal">INTERIORS</span>
+                    </a>
+                    <p class="text-muted-foreground text-sm leading-relaxed mb-6">
+                        Premium interior installation studio specializing in luxury finishes, wall paneling, and bespoke
+                        spatial transformations.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <iconify-icon icon="lucide:instagram" class="text-lg"></iconify-icon>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <iconify-icon icon="lucide:facebook" class="text-lg"></iconify-icon>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <iconify-icon icon="lucide:twitter" class="text-lg"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-muted-foreground">
+                        <li><a href="home.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="work_gallery.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="contact_us.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Legal</h4>
+                    <ul class="space-y-3 text-sm text-muted-foreground">
+                        <li><a href="privacy_policy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms_condition.html" class="hover:text-primary transition-colors">Terms & Conditions</a></li>
+                        <li><a href="return_refund.html" class="hover:text-primary transition-colors">Return & Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-muted-foreground">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:map-pin"
+                                class="text-primary text-lg shrink-0 mt-0.5"></iconify-icon>
+                            <span>123 Luxury Avenue, Design District, City, 10001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:phone" class="text-primary text-lg shrink-0"></iconify-icon>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:mail" class="text-primary text-lg shrink-0"></iconify-icon>
+                            <span>hello@bipininteriors.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+                <p>&copy; 2023 Bipin Interiors. All rights reserved.</p>
+                <p>Designed with elegance.</p>
+            </div>
+        </footer>
+
+        <!-- Sticky WhatsApp Button -->
+        <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer"
+            class="absolute bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all z-50">
+            <iconify-icon icon="lucide:message-circle" class="text-3xl"></iconify-icon>
+        </a>
+
+    </div>
+</body>
+
+</html>

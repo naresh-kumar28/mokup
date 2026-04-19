@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&family=Fira+Code:wght@300..700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-tertiary: var(--tertiary);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-destructive: var(--destructive);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --font-family-sans: var(--font-sans);
+        --font-family-heading: var(--font-heading);
+      }
+      :root { --background: #F9F7F2;
+        --tertiary: #E8E3D8;
+        --secondary: #4A4A4A;
+        --radius: 0.25rem;
+        --primary: #C5A059;
+        --font-heading: "Playfair Display", serif;
+        --accent: #F5F2EA;
+        --muted-foreground: #777777;
+        --card-foreground: #333333;
+        --input: #E8E3D8;
+        --secondary-foreground: #FFFFFF;
+        --font-sans: "Inter", sans-serif;
+        --border: #E8E3D8;
+        --muted: #F5F2EA;
+        --foreground: #333333;
+        --destructive: #D9534F;
+        --ring: #C5A059;
+        --card: #FFFFFF;
+        --primary-foreground: #FFFFFF; }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen w-full bg-background flex flex-col relative font-sans text-foreground overflow-x-hidden">
+
+        <!-- Header -->
+        <header
+            class="w-full bg-background/90 backdrop-blur-md border-b border-border sticky top-0 z-50 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <a href="home.html"
+                    class="text-2xl font-heading font-bold text-foreground tracking-wide flex items-center gap-2">
+                    <iconify-icon icon="lucide:sofa" class="text-primary"></iconify-icon>
+                    BIPIN <span class="text-primary font-normal">INTERIORS</span>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                    <a href="home.html" class="text-foreground hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-primary border-b border-primary pb-1">About</a>
+                    <a href="services.html" class="text-foreground hover:text-primary transition-colors">Services</a>
+                    <a href="work_gallery.html" class="text-foreground hover:text-primary transition-colors">Portfolio</a>
+                    <a href="contact_us.html" class="text-foreground hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-foreground hover:text-primary transition-colors rounded-full hover:bg-muted"
+                        aria-label="Toggle Dark Mode">
+                        <iconify-icon icon="lucide:moon" class="text-xl"></iconify-icon>
+                    </button>
+                    <button class="lg:hidden p-2 text-foreground hover:text-primary transition-colors">
+                        <iconify-icon icon="lucide:menu" class="text-2xl"></iconify-icon>
+                    </button>
+                    <a href="#"
+                        class="hidden lg:flex px-6 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors shadow-sm">
+                        Login/Signup
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex flex-col w-full">
+
+            <!-- Page Header -->
+            <section class="py-24 px-6 bg-secondary text-white text-center relative overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center">
+                </div>
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <span class="text-primary text-sm font-bold uppercase tracking-widest mb-4 block">Our Story</span>
+                    <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">About Bipin Interiors</h1>
+                    <p class="text-lg text-white/80 font-light max-w-xl mx-auto">
+                        Crafting luxurious, functional, and timeless spaces with uncompromising attention to detail.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Brand Story -->
+            <section class="py-24 px-6 bg-background">
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest">The Beginning</span>
+                        <h2 class="text-3xl md:text-5xl font-heading font-bold mt-3 text-foreground mb-8">A Legacy of
+                            Design Excellence</h2>
+                        <p class="text-muted-foreground text-lg mb-6 leading-relaxed font-light">
+                            Founded with a passion for transforming ordinary rooms into extraordinary environments,
+                            Bipin Interiors has grown into a premier interior installation studio. We specialize in
+                            bringing high-end residential and commercial visions to life.
+                        </p>
+                        <p class="text-muted-foreground text-lg mb-10 leading-relaxed font-light">
+                            Our journey began over a decade ago with a simple philosophy: interior design should not
+                            only look stunning but also withstand the test of time. Today, we are known for our
+                            meticulous craftsmanship in UV marble sheets, PVC paneling, and bespoke false ceilings.
+                        </p>
+                        <div class="flex items-center gap-6 border-l-4 border-primary pl-6 py-2">
+                            <div>
+                                <p class="text-3xl font-heading font-bold text-foreground">10+</p>
+                                <p class="text-xs uppercase tracking-widest mt-1 text-muted-foreground font-bold">Years
+                                    Experience</p>
+                            </div>
+                            <div class="w-px h-12 bg-border"></div>
+                            <div>
+                                <p class="text-3xl font-heading font-bold text-foreground">500+</p>
+                                <p class="text-xs uppercase tracking-widest mt-1 text-muted-foreground font-bold">
+                                    Projects Delivered</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="aspect-[4/5] overflow-hidden rounded-sm bg-muted shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000"
+                                alt="Interior Design Studio" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Craftsmanship Focus -->
+            <section class="py-24 px-6 bg-muted/30 border-y border-border">
+                <div class="max-w-7xl mx-auto text-center">
+                    <span class="text-primary text-sm font-bold uppercase tracking-widest">Our Philosophy</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold mt-3 text-foreground mb-16">Uncompromising
+                        Craftsmanship</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                        <div
+                            class="bg-card p-10 shadow-sm border border-border rounded-sm hover:border-primary/50 transition-colors group">
+                            <div
+                                class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-3xl mb-8 group-hover:scale-110 transition-transform">
+                                <iconify-icon icon="lucide:gem"></iconify-icon>
+                            </div>
+                            <h3 class="text-xl font-heading font-bold mb-4 text-foreground">Premium Materials</h3>
+                            <p class="text-muted-foreground text-sm leading-relaxed">
+                                We meticulously source the highest grade UV marble, PVC panels, and WPC louvers. Our
+                                materials are chosen for their durability, finish, and ability to elevate any space.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-card p-10 shadow-sm border border-border rounded-sm hover:border-primary/50 transition-colors group">
+                            <div
+                                class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-3xl mb-8 group-hover:scale-110 transition-transform">
+                                <iconify-icon icon="lucide:ruler"></iconify-icon>
+                            </div>
+                            <h3 class="text-xl font-heading font-bold mb-4 text-foreground">Precision Execution</h3>
+                            <p class="text-muted-foreground text-sm leading-relaxed">
+                                Luxury is in the details. Our installation process is marked by exact measurements,
+                                seamless joints, and a flawless finish that defines high-end interior design.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-card p-10 shadow-sm border border-border rounded-sm hover:border-primary/50 transition-colors group">
+                            <div
+                                class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-3xl mb-8 group-hover:scale-110 transition-transform">
+                                <iconify-icon icon="lucide:users"></iconify-icon>
+                            </div>
+                            <h3 class="text-xl font-heading font-bold mb-4 text-foreground">Client-Centric Approach</h3>
+                            <p class="text-muted-foreground text-sm leading-relaxed">
+                                We collaborate closely with our clients, ensuring their vision is translated into
+                                reality with transparency, timely delivery, and utmost professionalism.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Experience -->
+            <section class="py-24 px-6 bg-background">
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1 relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="aspect-square overflow-hidden rounded-sm bg-muted shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800"
+                                    alt="Craftsman at work" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="aspect-square overflow-hidden rounded-sm bg-muted shadow-sm translate-y-8">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800"
+                                    alt="Precision tools" class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest">Our Expertise</span>
+                        <h2 class="text-3xl md:text-5xl font-heading font-bold mt-3 text-foreground mb-8">Master
+                            Artisans at Work</h2>
+                        <p class="text-muted-foreground text-lg mb-8 leading-relaxed font-light">
+                            Behind every flawless installation is a team of dedicated artisans. Our installers are not
+                            just workers; they are craftsmen who take immense pride in their art.
+                        </p>
+                        <p class="text-muted-foreground text-lg mb-10 leading-relaxed font-light">
+                            With rigorous training and years of hands-on experience, our team handles complex
+                            architectural challenges with ease, ensuring that every panel, sheet, and louver is placed
+                            with absolute perfection.
+                        </p>
+                        <a href="#"
+                            class="inline-block px-8 py-4 bg-primary text-primary-foreground font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-primary/90 transition-all shadow-md">
+                            Meet the Team
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-background pt-20 pb-10 px-6 border-t border-border">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="#"
+                        class="text-2xl font-heading font-bold text-foreground tracking-wide flex items-center gap-2 mb-6">
+                        <iconify-icon icon="lucide:sofa" class="text-primary"></iconify-icon>
+                        BIPIN <span class="text-primary font-normal">INTERIORS</span>
+                    </a>
+                    <p class="text-muted-foreground text-sm leading-relaxed mb-6">
+                        Premium interior installation studio specializing in luxury finishes, wall paneling, and bespoke
+                        spatial transformations.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <iconify-icon icon="lucide:instagram" class="text-lg"></iconify-icon>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <iconify-icon icon="lucide:facebook" class="text-lg"></iconify-icon>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <iconify-icon icon="lucide:twitter" class="text-lg"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-muted-foreground">
+                        <li><a href="home.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="work_gallery.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="contact_us.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Legal</h4>
+                    <ul class="space-y-3 text-sm text-muted-foreground">
+                        <li><a href="privacy_policy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms_condition.html" class="hover:text-primary transition-colors">Terms & Conditions</a></li>
+                        <li><a href="return_refund.html" class="hover:text-primary transition-colors">Return & Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-6 text-foreground">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-muted-foreground">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:map-pin"
+                                class="text-primary text-lg shrink-0 mt-0.5"></iconify-icon>
+                            <span>123 Luxury Avenue, Design District, City, 10001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:phone" class="text-primary text-lg shrink-0"></iconify-icon>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:mail" class="text-primary text-lg shrink-0"></iconify-icon>
+                            <span>hello@bipininteriors.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+                <p>&copy; 2023 Bipin Interiors. All rights reserved.</p>
+                <p>Designed with elegance.</p>
+            </div>
+        </footer>
+
+        <!-- Sticky WhatsApp Button -->
+        <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer"
+            class="absolute bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all z-50">
+            <iconify-icon icon="lucide:message-circle" class="text-3xl"></iconify-icon>
+        </a>
+
+    </div>
+</body>
+
+</html>
