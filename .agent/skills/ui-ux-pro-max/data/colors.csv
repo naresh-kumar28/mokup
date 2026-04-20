@@ -88,7 +88,7 @@ No,Product Type,Primary (Hex),Secondary (Hex),CTA (Hex),Background (Hex),Text (H
 87,Developer Tool / IDE,#1E293B,#334155,#22C55E,#0F172A,#F8FAFC,#475569,Code dark + run green
 88,Biotech / Life Sciences,#0EA5E9,#0284C7,#10B981,#F0F9FF,#0C4A6E,#BAE6FD,DNA blue + life green
 89,Space Tech / Aerospace,#F8FAFC,#94A3B8,#3B82F6,#0B0B10,#F8FAFC,#1E293B,Star white + launch blue
-90,Architecture / Interior,#171717,#404040,#D4AF37,#FFFFFF,#171717,#E5E5E5,Minimal black + accent gold
+90,Architecture / Decor,#171717,#404040,#D4AF37,#FFFFFF,#171717,#E5E5E5,Minimal black + accent gold
 91,Quantum Computing,#00FFFF,#7B61FF,#FF00FF,#050510,#E0E0FF,#333344,Quantum cyan + interference purple
 92,Biohacking / Longevity,#FF4D4D,#4D94FF,#00E676,#F5F5F7,#1C1C1E,#E5E5EA,Bio red/blue + vitality green
 93,Autonomous Systems,#00FF41,#008F11,#FF3333,#0D1117,#E6EDF3,#30363D,Terminal green + alert red

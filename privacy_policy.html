@@ -57,76 +57,94 @@
         --ring: #C5A059;
         --card: #FFFFFF;
         --primary-foreground: #FFFFFF; }
+          .dark {
+        --background: #0f1115;
+        --card: #171923;
+        --card-foreground: #f8fafc;
+        --foreground: #f8fafc;
+        --primary: #C5A059;
+        --primary-foreground: #ffffff;
+        --secondary: #1e293b;
+        --secondary-foreground: #f8fafc;
+        --tertiary: #1a1f28;
+        --muted: #1e2532;
+        --muted-foreground: #94a3b8;
+        --accent: #1e293b;
+        --destructive: #D9534F;
+        --border: #2a3241;
+        --input: #2a3241;
+        --ring: #C5A059;
+      }
     </style>
 </head>
 
 <body>
-    <div class="min-h-screen w-full bg-background flex flex-col relative font-sans text-foreground overflow-x-hidden">
+    <div class="min-h-screen w-full bg-background flex flex-col relative font-sans text-foreground ">
 
         <!-- Header -->
         <header
-            class="sticky top-0 z-50 w-full border-b border-white/10 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70">
+            class="sticky top-0 z-50 w-full border-b border-card/10 bg-card/80 backdrop-blur-xl supports-[backdrop-filter]:bg-card/70">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <div class="flex h-[78px] items-center justify-between">
-        
+
                     <!-- Logo -->
                     <a href="home.html" class="flex items-center gap-3 shrink-0">
                         <div
-                            class="flex h-10 w-10 items-center justify-center rounded-full border border-amber-200 bg-amber-50 text-amber-600 shadow-sm">
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-amber-200 bg-amber-500/10 text-amber-6000/10 text-amber-600 shadow-sm">
                             <iconify-icon icon="lucide:sofa" class="text-[18px]"></iconify-icon>
                         </div>
                         <div class="leading-tight">
-                            <!-- <p class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Premium Interior Studio</p> -->
-                            <h1 class="text-[22px] font-bold tracking-[0.08em] text-slate-900">
-                                BIPIN <span class="font-bold text-amber-600">INTERIOR</span>
+                            <!-- <p class="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">Premium Decor Studio</p> -->
+                            <h1 class="text-[22px] font-bold tracking-[0.08em] text-foreground">
+                                BIPIN <span class="font-bold text-amber-600">DECOR</span>
                             </h1>
                         </div>
                     </a>
-        
+
                     <!-- Desktop Nav -->
                     <nav class="hidden lg:flex items-center gap-8 font-bold">
                         <a href="home.html"
-                            class="relative text-[13px] uppercase tracking-[0.18em] text-slate-900 after:absolute after:left-0 after:-bottom-2 after:h-[1.5px] after:w-full after:bg-amber-500">
+                            class="text-[13px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
                             Home
                         </a>
                         <a href="about.html"
-                            class="text-[13px] uppercase tracking-[0.18em] text-slate-600 hover:text-slate-900 transition-colors">
+                            class="text-[13px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
                             About
                         </a>
                         <a href="services.html"
-                            class="text-[13px] uppercase tracking-[0.18em] text-slate-600 hover:text-slate-900 transition-colors">
+                            class="text-[13px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
                             Services
                         </a>
                         <a href="work_gallery.html"
-                            class="text-[13px] uppercase tracking-[0.18em] text-slate-600 hover:text-slate-900 transition-colors">
+                            class="text-[13px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
                             Portfolio
                         </a>
                         <a href="contact_us.html"
-                            class="text-[13px] uppercase tracking-[0.18em] text-slate-600 hover:text-slate-900 transition-colors">
+                            class="text-[13px] uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
                             Contact
                         </a>
                     </nav>
-        
+
                     <!-- Right Actions -->
                     <div class="flex items-center gap-3">
                         <button
-                            class="hidden sm:inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 hover:border-amber-300 hover:text-amber-600 transition-all duration-300"
+                            class="hidden sm:inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-muted-foreground hover:border-amber-300 hover:text-amber-600 transition-all duration-300"
                             aria-label="Toggle Dark Mode">
                             <iconify-icon icon="lucide:moon" class="text-[18px]"></iconify-icon>
                         </button>
-        
+
                         <a href="contact_us.html"
                             class="hidden lg:inline-flex items-center justify-center rounded-full border border-amber-600 bg-amber-600 px-6 py-3 text-[12px] font-medium uppercase tracking-[0.18em] text-white shadow-[0_10px_30px_rgba(217,119,6,0.18)] transition-all duration-300 hover:-translate-y-[1px] hover:bg-amber-700">
                             Login
                         </a>
-        
+
                         <button
-                            class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 hover:border-amber-300 hover:text-amber-600 transition-all duration-300"
+                            class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-muted-foreground hover:border-amber-300 hover:text-amber-600 transition-all duration-300"
                             aria-label="Open Menu">
                             <iconify-icon icon="lucide:menu" class="text-[20px]"></iconify-icon>
                         </button>
                     </div>
-        
+
                 </div>
             </div>
         </header>
@@ -150,9 +168,9 @@
                     class="max-w-4xl mx-auto bg-card p-10 md:p-16 rounded-sm shadow-sm border border-border prose prose-stone prose-h2:font-heading prose-h2:text-2xl prose-h2:text-foreground prose-h3:font-heading prose-h3:text-xl prose-h3:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary hover:prose-a:text-primary/80 max-w-none">
 
                     <p>
-                        At Bipin Interiors, we are committed to protecting your privacy and ensuring the security of
+                        At Bipin Decors, we are committed to protecting your privacy and ensuring the security of
                         your personal information. This Privacy Policy explains how we collect, use, disclose, and
-                        safeguard your information when you visit our website or use our interior design and
+                        safeguard your information when you visit our website or use our Decor design and
                         installation services.
                     </p>
 
@@ -180,7 +198,7 @@
                         legitimate business interests, in order to enter into or perform a contract with you, with your
                         consent, and/or for compliance with our legal obligations.</p>
                     <ul>
-                        <li>To facilitate and deliver our interior installation services.</li>
+                        <li>To facilitate and deliver our Decor installation services.</li>
                         <li>To send you administrative information, such as quotes, invoices, and scheduling updates.
                         </li>
                         <li>To respond to your inquiries and offer support.</li>
@@ -218,9 +236,9 @@
 
                     <h2>6. Contact Us About This Policy</h2>
                     <p>If you have questions or comments about this notice, you may email us at <a
-                            href="mailto:privacy@bipininteriors.com">privacy@bipininteriors.com</a> or by post to:</p>
+                            href="mailto:privacy@bipinDecors.com">privacy@bipinDecors.com</a> or by post to:</p>
                     <p>
-                        <strong>Bipin Interiors</strong><br>
+                        <strong>Bipin Decors</strong><br>
                         123 Luxury Avenue, Design District<br>
                         City, State 10001
                     </p>
@@ -231,94 +249,101 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-white pt-16 pb-8 px-6 border-t border-slate-100">
+        <footer class="bg-card pt-16 pb-8 px-6 border-t border-border">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
-        
+
                 <div class="col-span-1 md:col-span-2 lg:col-span-4 lg:pr-8">
                     <a href="home.html" class="inline-flex items-center gap-3 mb-5 group">
                         <div
-                            class="flex h-12 w-12 items-center justify-center rounded-full border border-amber-200 bg-amber-50 text-amber-600 shadow-sm transition-transform duration-500 group-hover:rotate-[360deg]">
+                            class="flex h-12 w-12 items-center justify-center rounded-full border border-amber-200 bg-amber-500/10 text-amber-6000/10 text-amber-600 shadow-sm transition-transform duration-500 group-hover:rotate-[360deg]">
                             <iconify-icon icon="lucide:sofa" class="text-xl"></iconify-icon>
                         </div>
                         <div class="leading-tight">
-                            <h1 class="text-2xl font-bold tracking-[0.08em] text-slate-900">
-                                BIPIN <span class="text-amber-600">INTERIOR</span>
+                            <h1 class="text-2xl font-bold tracking-[0.08em] text-foreground">
+                                BIPIN <span class="text-amber-600">DECOR</span>
                             </h1>
                         </div>
                     </a>
-        
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
-                        Premium interior installation studio specializing in luxury finishes, wall paneling, false ceilings, and
+
+                    <p class="text-muted-foreground text-sm leading-relaxed mb-6">
+                        Premium Decor installation studio specializing in luxury finishes, wall paneling, false
+                        ceilings, and
                         bespoke spatial transformations.
                     </p>
-        
+
                     <div class="flex items-center gap-3">
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all duration-300 shadow-sm">
+                            class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all duration-300 shadow-sm">
                             <iconify-icon icon="lucide:instagram" class="text-lg"></iconify-icon>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all duration-300 shadow-sm">
+                            class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all duration-300 shadow-sm">
                             <iconify-icon icon="lucide:facebook" class="text-lg"></iconify-icon>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all duration-300 shadow-sm">
+                            class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all duration-300 shadow-sm">
                             <iconify-icon icon="lucide:twitter" class="text-lg"></iconify-icon>
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="lg:col-span-2 lg:col-start-6">
-                    <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 mb-6">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-slate-500">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-foreground mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-muted-foreground">
                         <li><a href="home.html" class="hover:text-amber-600 transition-colors">Home</a></li>
                         <li><a href="about.html" class="hover:text-amber-600 transition-colors">About Us</a></li>
                         <li><a href="services.html" class="hover:text-amber-600 transition-colors">Services</a></li>
-                        <li><a href="work_gallery.html" class="hover:text-amber-600 transition-colors">Portfolio</a></li>
+                        <li><a href="work_gallery.html" class="hover:text-amber-600 transition-colors">Portfolio</a>
+                        </li>
                         <li><a href="contact_us.html" class="hover:text-amber-600 transition-colors">Contact</a></li>
                     </ul>
                 </div>
-        
+
                 <div class="lg:col-span-2">
-                    <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 mb-6">Legal</h4>
-                    <ul class="space-y-3 text-sm text-slate-500">
-                        <li><a href="privacy_policy.html" class="hover:text-amber-600 transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms_condition.html" class="hover:text-amber-600 transition-colors">Terms & Conditions</a>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-foreground mb-6">Legal</h4>
+                    <ul class="space-y-3 text-sm text-muted-foreground">
+                        <li><a href="privacy_policy.html" class="hover:text-amber-600 transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="terms_condition.html" class="hover:text-amber-600 transition-colors">Terms &
+                                Conditions</a>
                         </li>
-                        <li><a href="return_refund.html" class="hover:text-amber-600 transition-colors">Return Policy</a></li>
+                        <li><a href="return_refund.html" class="hover:text-amber-600 transition-colors">Return
+                                Policy</a></li>
                     </ul>
                 </div>
-        
+
                 <div class="lg:col-span-3">
-                    <h4 class="text-sm font-bold uppercase tracking-widest text-slate-900 mb-6">Contact Us</h4>
-                    <ul class="space-y-4 text-sm text-slate-500">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-foreground mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-muted-foreground">
                         <li class="flex items-start gap-3">
-                            <iconify-icon icon="lucide:map-pin" class="text-amber-600 text-lg mt-0.5 shrink-0"></iconify-icon>
+                            <iconify-icon icon="lucide:map-pin"
+                                class="text-amber-600 text-lg mt-0.5 shrink-0"></iconify-icon>
                             <span>123 Luxury Avenue, Design District, City, 10001</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <iconify-icon icon="lucide:phone" class="text-amber-600 text-lg shrink-0"></iconify-icon>
-                            <a href="tel:+15551234567" class="hover:text-amber-600 transition-colors">+1 (555) 123-4567</a>
+                            <a href="tel:+15551234567" class="hover:text-amber-600 transition-colors">+1 (555)
+                                123-4567</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <iconify-icon icon="lucide:mail" class="text-amber-600 text-lg shrink-0"></iconify-icon>
-                            <a href="mailto:hello@bipininteriors.com"
-                                class="hover:text-amber-600 transition-colors">hello@bipininteriors.com</a>
+                            <a href="mailto:hello@bipinDecors.com"
+                                class="hover:text-amber-600 transition-colors">hello@bipinDecors.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        
+
             <div
-                class="max-w-7xl mx-auto pt-6 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500">
-                <p>&copy; 2026 Bipin Interiors. All rights reserved.</p>
+                class="max-w-7xl mx-auto pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-muted-foreground">
+                <p>&copy; 2026 Bipin Decors. All rights reserved.</p>
                 <p class="flex items-center gap-1.5">
                     Designed with <iconify-icon icon="lucide:heart"
                         class="text-amber-500 text-sm fill-amber-500/20"></iconify-icon> by LearnSyntax
                 </p>
             </div>
         </footer>
-        
+
         <a href="https://wa.me/15551234567" target="_blank" aria-label="Chat on WhatsApp"
             class="fixed bottom-12   right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-[0_4px_12px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_6px_16px_rgba(37,211,102,0.5)] transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
@@ -328,6 +353,45 @@
         </a>
 
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateDarkModeIcon();
+        }
+
+        function updateDarkModeIcon() {
+            const isDark = document.documentElement.classList.contains('dark');
+            const buttons = document.querySelectorAll('button[aria-label="Toggle Dark Mode"]');
+            buttons.forEach(btn => {
+                const icon = btn.querySelector('iconify-icon');
+                if (icon) {
+                    icon.setAttribute('icon', isDark ? 'lucide:sun' : 'lucide:moon');
+                }
+            });
+        }
+
+        // Initialize theme based on preference or system
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        
+        // Set initial icon on load
+        document.addEventListener('DOMContentLoaded', updateDarkModeIcon);
+        
+        // Add event listeners to all dark mode buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('button[aria-label="Toggle Dark Mode"]');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', toggleDarkMode);
+            });
+        });
+    </script>
 </body>
+
 
 </html>
